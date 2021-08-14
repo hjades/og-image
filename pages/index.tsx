@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const defaultTitle = "Welcome to OG Image (Next.js) by Jade";
 
 const Home: NextPage = () => {
   const { query } = useRouter();
   const title = query.title ? String(query.title) : defaultTitle;
-  const baseUrl = typeof window === "undefined" ? "" : window?.location.origin;
 
   return (
     <div>
@@ -17,7 +16,8 @@ const Home: NextPage = () => {
           name="description"
           content="OG Image (Next.js) | Made with 🧡  by Jade"
         />
-        <meta property="og:image" content={`${baseUrl}/t?title=${title}`} />
+        <meta name="thumbnail" content={`/t?title=${title}`} />
+        <meta property="og:image" content={`/t?title=${title}`} />
         <meta name="twitter:card" content="summary" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -26,8 +26,12 @@ const Home: NextPage = () => {
         <h1>
           Welcome to OG Image (<a href="https://nextjs.org">Next.js</a>) by Jade
         </h1>
+        <p>
+          Generate your thumbnail by adding <code>?title=YOUR_TITLE</code>{" "}
+          behind the URL
+        </p>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt={title} src={`/t?title=${title}`} width="600px" />
+        <img alt={title} src={`/api?title=${title}`} width="600px" />
       </main>
     </div>
   );

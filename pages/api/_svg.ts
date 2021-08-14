@@ -1,7 +1,7 @@
 export default function getSvg(title: string, hostname: string): string {
   const svg = `<svg width="1200" height="627" viewBox="0 0 1200 627" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .title { font: bolder 72px Helvetica; color: #252A31; height: 430px; display: flex; align-items: flex-start; justify-content: center; }
+    .title { font: bolder 72px Helvetica; color: #252A31; height: 430px; display: flex; align-items: flex-start; justify-content: flex-start; }
     .subtitle { font: bold 40px Helvetica; color: #252A31; height: 50px; display: flex; align-items: flex-end; justify-content: flex-start; }
   </style>
   <rect x="10" y="10" width="1180" height="607" rx="10" fill="white"/>
