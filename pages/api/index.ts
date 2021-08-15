@@ -1,15 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import getSvg from "./_svg";
+import getSvg from "./_svg"; // hashnode
+// import getSvg from "./_svgDev"; // dev.to
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { hostname = "" } = new URL(
-    req?.url || "",
-    `http://${req.headers.host}`
-  );
-  const svg = getSvg(String(req.query.title), hostname);
+  const svg = getSvg(String(req.query.title), String(req.query.footer));
   res.statusCode = 200;
   res.setHeader("Content-Type", "image/svg+xml");
   res.setHeader(
