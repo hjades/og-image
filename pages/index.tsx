@@ -24,14 +24,14 @@ const Home: NextPage = () => {
 
       <main>
         <h1>
-          Welcome to OG Image (<a href="https://nextjs.org">Next.js</a>) by Jade
+          Testing Codeanywhere
         </h1>
         <p>
           Generate your thumbnail by adding <code>?title=YOUR_TITLE</code>{" "}
           behind the URL
         </p>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt={title} src={`/api?title=${title}`} width="600px" />
+        <img alt="Testing Codeanywhere" src="/api?title=Testing Codeanywhere" width="600px" />
       </main>
     </div>
   );
