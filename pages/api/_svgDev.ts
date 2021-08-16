@@ -1,13 +1,13 @@
 export default function getSvg(title: string, footer: string): string {
   const svg = `
-  <svg width="1200" height="627" viewBox="0 0 1200 627" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="1000" height="420" viewBox="0 0 1000 420" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
-      .title { font: bolder 72px Helvetica; color: #252A31; height: 430px; display: flex; align-items: flex-start; justify-content: flex-start; }
-      .subtitle { font: bold 40px Helvetica; color: #252A31; height: 50px; display: flex; align-items: flex-end; justify-content: flex-start; }
+      .title { font: bolder 52px Helvetica; color: #252A31; height: 230px; display: flex; align-items: flex-start; justify-content: flex-start; }
+      .subtitle { font: bold 32px Helvetica; color: #252A31; height: 50px; display: flex; align-items: flex-end; justify-content: flex-start; }
     </style>
-    <rect x="10" y="10" width="1180" height="607" rx="10" fill="white"/>
-    <rect x="10" y="10" width="1180" height="607" rx="10" stroke="url(#paint0_angular)" stroke-width="20"/>
-    <foreignObject x="80" y="80" width="1040" height="480">
+    <rect x="10" y="10" width="980" height="400" rx="10" fill="white"/>
+    <rect x="10" y="10" width="980" height="400" rx="10" stroke="url(#paint0_angular)" stroke-width="20"/>
+    <foreignObject x="80" y="80" width="840" height="280">
       <div class="title" xmlns="http://www.w3.org/1999/xhtml">
         ${title}
       </div>
